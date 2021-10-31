@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Crypto App with Apollo GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index"
+  },
+  "author": "Rabie Nasser",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.3.0",
+    "apollo-server": "^3.4.0",
+    "graphql": "^15.7.2"
+  }
+}
