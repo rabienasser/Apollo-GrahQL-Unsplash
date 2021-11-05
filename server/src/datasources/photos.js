@@ -1,4 +1,5 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
+require('dotenv').config();
 
 class UnsplashPhotosAPI extends RESTDataSource {
   constructor() {
@@ -8,10 +9,7 @@ class UnsplashPhotosAPI extends RESTDataSource {
   }
 
   willSendRequest(request) {
-    request.params.set(
-      'client_id',
-      '2hIPdbmPYpokNZijPp7K20YBSgCHMJNj2aJ2h4wqnfo'
-    );
+    request.params.set('client_id', process.env.UNSPLASH_PHOTOS_ACCESS_KEY);
   }
 
   async getAllPhotos(page = '1', limit = '10', order = 'latest') {
